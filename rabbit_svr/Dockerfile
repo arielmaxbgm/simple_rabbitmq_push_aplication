@@ -8,3 +8,5 @@ RUN wget https://www.rabbitmq.com/rabbitmq-signing-key-public.asc
 RUN apt-key add rabbitmq-signing-key-public.asc
 
 RUN apt-get -y install rabbitmq-server
+
+CMD rabbitmq-server
