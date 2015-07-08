@@ -9,6 +9,7 @@ RUN pip install Flask-API
 RUN pip install pika
 
 RUN mkdir app
+
 ADD app.py postman.py config.ini app/
 
-CMD python /app/app.py
+CMD python app/app.py
