@@ -3,6 +3,12 @@
 
 # Inspect docker containers to find the rabbitmq's IP
 docker_id=$(sudo docker ps | grep rabbit | awk '{print $1}')
+
+if [ -z $docker_id ] ; then
+	echo "The rabbitmq container is not running"
+	exit 1
+fi
+
 rabbit_ip=$(sudo docker inspect -f '{{ .NetworkSettings.IPAddress }}' $docker_id)
 
 # Update the ini file to put the correct value
