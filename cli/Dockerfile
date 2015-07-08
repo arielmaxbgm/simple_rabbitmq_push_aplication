@@ -12,6 +12,8 @@ RUN apt-get install -y build-essential
 
 RUN npm install amqp
 
-ADD suscriber.js /home/suscriber.js
+RUN mkdir app
 
-CMD node /home/suscriber.js
+ADD suscriber.js config.json app/
+
+CMD nodejs app/suscriber.js
