@@ -1,0 +1,5 @@
+{
+	"msg_bus_host": "localhost",
+	"msg_bus_port": "5672",
+	"msg_bus_queue": "my-queue"
+}
