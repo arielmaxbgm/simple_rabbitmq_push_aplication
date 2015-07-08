@@ -6,7 +6,7 @@ from postman import Postman
 app = FlaskAPI(__name__)
 
 # Msg bus configuration
-postman = Postman('config.ini')
+postman = Postman('app/config.ini')
 
 @app.route('/notify', methods=['POST'])
 def notify():
@@ -15,4 +15,4 @@ def notify():
 	return '', status.HTTP_201_CREATED
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', debug=True)
