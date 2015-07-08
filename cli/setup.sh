@@ -11,4 +11,4 @@ fi
 rabbit_ip=$(sudo docker inspect -f '{{ .NetworkSettings.IPAddress }}' $docker_id)
 
 # Update the ini file to put the correct value
-sed -i -r -s "s/\"msg_bus_host\".*/\"msg_bus_host\":$rabbit_ip/" config.json
+sed -i -r -s "s/\"msg_bus_host\".*/\"msg_bus_host\":\"$rabbit_ip\"/" config.json
