@@ -1,4 +1,6 @@
-# Docker image with an API Rest using Flask
+# Description
+
+Docker image with an API Rest using Flask
 
 ## Setup
 Run setup.sh in order to update the rabbitmq container.
